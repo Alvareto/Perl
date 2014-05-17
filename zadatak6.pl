@@ -3,14 +3,15 @@
 # preﬁksom. Duljina preﬁksa zadaje se kao zadnji argument naredbenog
 # retka, a prethode mu imena datoteka (može ih biti i više).
 
+use open ':std', ':encoding(UTF-8)';
 my %count;
 
 $duljinaPrefiksa =  pop @ARGV;
 
-while (<>)
+while (<>) {
 	foreach $word ($_ =~ /\w+/g) {
 		$_ = lc substr($word, 0, $duljinaPrefiksa);
-		if (tr/a-z/a-z/ == $duljinaPrefiksa) { #transliteracija - broji mala slova u $_
+		if (length == $duljinaPrefiksa) {			
 			$count{$_}++;
 		}
 	}

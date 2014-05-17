@@ -8,7 +8,7 @@ while(<>) {
 	chomp;
 	$w = "(.+?)";
 	# JMBAG;Prezime;Ime;Termin;Zakljucano 
-	$_ =~ m/^$w;$w;$w;$w;$w$/; # problem je bio što nisam stavio $ za kraj reda.. POBOGU
+	$_ =~ m/^$w;$w;$w;$w;$w$/; 																	# problem je bio što nisam stavio $ za kraj reda.. POBOGU
 	$JMBAG = $1;
 	$Prezime = $2;
 	$Ime = $3;
@@ -36,7 +36,8 @@ while(<>) {
 			second => $6,
 		);
 
-	if($End > $Start) {
+	if($End >= $Start) {
+		$Start->subtract(hours => 1);
 		print "$JMBAG $Prezime $Ime	- PROBLEM: $Start --> $End \n";
 	}
 }
