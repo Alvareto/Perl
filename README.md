@@ -13,7 +13,9 @@ U repozitoriju na stranici predmeta nalaze se dvije log-datoteke jednog web posl
 
 Napisati skriptu u Perlu koja će za svaki sat u danu ispisati broj pristupa poslužitelju. Kao argumenti naredbenog retka pri pozivu se navode imena log datoteka koje treba analizirati. Ako se ne navede niti jedna datoteka, skripta podatke treba čitati sa standardnog ulaza (sjetite se operatora <>).
 
-` Datum: 2008-02-24
+````txt
+
+ Datum: 2008-02-24
  sat : broj pristupa
 -------------------------------
  00 : 99
@@ -31,7 +33,7 @@ Napisati skriptu u Perlu koja će za svaki sat u danu ispisati broj pristupa pos
  01 : 68
  02 : 48
    ...`
-
+```` 
 
 ### TASK 4
 Coming soon.
